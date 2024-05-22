@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: white;
+    --bg-url: url(./imagens/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 1);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.5);
+    --surface-color-border: 2px solid white;
+    --highlight-color: rgba(255, 255, 255, 0.5);
+    --switch-bg-url: url(./imagens/MoonStars.svg);
+    --profile-border: 2px solid white;
+}
+
+.light{
+    --text-color: black;
+    --bg-url: url(./imagens/bg-mobile-light.jpg);
+    --stroke-color: black;
+    --surface-color: rgba(0, 0, 0, 0.1);
+    --surface-color-hover: grey;
+    --surface-color-border: 2px solid black;
+    --highlight-color: grey;
+    --switch-bg-url: url(./imagens/Sun.svg);
+    --profile-border: 2px solid b;
+
+}
+
+body{
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+
+
+#container{
+    width: 360px;
+    margin: 0 auto 0px;
+    padding: 24px;
+}
+
+#profile{
+    text-align: center;
+}
+
+#profile img{
+    width: 112px;
+    border-radius: 50%;
+    border: var(--profile-border);
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+#switch{
+    position: relative;
+    width: 64px;
+    
+    margin: 20px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white;
+    background-image: var(--switch-bg-url);
+    background-repeat: no repeat;
+    background-size: 30px;
+    background-position: center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%)
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 99px;
+    backdrop-filter: blur(4px);
+}
+
+ul{
+    list-style: none;
+    padding: 0 0;
+}
+
+ul li a{
+    border: 1px solid var(--stroke-color);
+    margin: 15px;
+    padding: 16px 24px;
+    display: block;
+    text-align: center;
+    background: var(--surface-color);
+    border-radius: 4%;
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.3s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: var(--surface-color-border);
+}
+
+#social-links{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    font-size: 24px;
+}
+
+#social-links a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%
+}
+
+#social-links a:hover{
+    background-size: 500px;
+    background: var(--highlight-color);
+    transition: 0.3s;
+}
+
+#rodape{
+    padding: 24px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#rodape a:hover{
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.5);
+}
