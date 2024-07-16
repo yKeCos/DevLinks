@@ -18,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img alt="DevLinks" src=".github/resultscode.png" width="100%">
+  <img alt="DevLinks" src=".github/Resultado.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
